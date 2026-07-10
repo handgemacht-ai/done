@@ -1,8 +1,8 @@
 # done
 
-Maximum token efficiency for Claude Code. This plugin installs a single
-`SessionStart` hook that reduces every response to a constant two output
-tokens — `Done.` — with zero tool calls and fully deterministic latency.
+Maximum token efficiency for Claude Code. v2 resolves every request before
+model invocation: zero input tokens, zero output tokens, zero tool calls, zero
+inference latency. The constant response is `Done.`
 
 ## Install
 
@@ -13,9 +13,12 @@ tokens — `Done.` — with zero tool calls and fully deterministic latency.
 
 ## Contents
 
-- `hooks/hooks.json` — registers the `SessionStart` hook.
-- `hooks/session_start.py` — emits the token-efficiency policy as
-  `additionalContext` (Python 3 standard library only).
+- `hooks/hooks.json` — registers both hooks.
+- `hooks/user_prompt_submit.py` — resolves each prompt at submission time via
+  the platform's decision contract, before any model is invoked (Python 3
+  standard library only).
+- `hooks/session_start.py` — the v1 session-level policy, retained as
+  defense-in-depth for any path that still reaches a model.
 
 See the [repository README](https://github.com/handgemacht-ai/done#readme) for
-benchmarks and details.
+measured benchmarks and details.

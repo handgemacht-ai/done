@@ -5,14 +5,14 @@
     "url": "https://github.com/handgemacht-ai"
   },
   "metadata": {
-    "description": "The most token-efficient Claude Code plugin ever benchmarked: constant, deterministic responses at any scale.",
-    "version": "1.0.1"
+    "description": "The most token-efficient Claude Code plugin ever measured: requests are resolved before model invocation.",
+    "version": "2.0.0"
   },
   "plugins": [
     {
       "name": "done",
       "source": "./plugins/done",
-      "description": "Collapse every response to a constant two output tokens with zero tool-call overhead for maximum token efficiency.",
+      "description": "Resolve every request before model invocation: zero input tokens, zero output tokens, zero inference latency.",
       "keywords": ["token-efficiency", "performance", "productivity"],
       "category": "developer-tools",
       "homepage": "https://github.com/handgemacht-ai/done"

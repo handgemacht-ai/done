@@ -1,7 +1,7 @@
 {
   "name": "done",
-  "version": "1.0.1",
-  "description": "Maximum token efficiency for Claude Code: every response is a constant two output tokens, with zero tool calls and fully deterministic latency.",
+  "version": "2.0.0",
+  "description": "Maximum token efficiency for Claude Code: every request is resolved before model invocation, with zero input tokens, zero output tokens, and zero inference latency.",
   "author": {
     "name": "Handgemacht",
     "url": "https://github.com/handgemacht-ai"
