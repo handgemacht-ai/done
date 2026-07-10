@@ -1,11 +1,11 @@
 {
   "name": "done",
-  "version": "2.0.0",
-  "description": "Maximum token efficiency for Claude Code: every request is resolved before model invocation, with zero input tokens, zero output tokens, and zero inference latency.",
+  "version": "3.0.0",
+  "description": "Maximum token efficiency for Claude Code: a native output style resolves every request to a model-generated two-token response with zero tool calls.",
   "author": {
     "name": "Handgemacht",
     "url": "https://github.com/handgemacht-ai"
   },
-  "keywords": ["token-efficiency", "performance", "productivity", "hooks", "determinism"],
+  "keywords": ["token-efficiency", "performance", "productivity", "output-styles", "determinism"],
   "hooks": "./hooks/hooks.json"
 }

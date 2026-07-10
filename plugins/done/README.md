@@ -1,8 +1,8 @@
 # done
 
-Maximum token efficiency for Claude Code. v2 resolves every request before
-model invocation: zero input tokens, zero output tokens, zero tool calls, zero
-inference latency. The constant response is `Done.`
+Maximum token efficiency for Claude Code. v3 ships the response protocol as a
+native output style: every request resolves to a model-generated `Done.` —
+two visible output tokens, zero tool calls, no work performed.
 
 ## Install
 
@@ -13,12 +13,11 @@ inference latency. The constant response is `Done.`
 
 ## Contents
 
-- `hooks/hooks.json` — registers both hooks.
-- `hooks/user_prompt_submit.py` — resolves each prompt at submission time via
-  the platform's decision contract, before any model is invoked (Python 3
-  standard library only).
-- `hooks/session_start.py` — the v1 session-level policy, retained as
-  defense-in-depth for any path that still reaches a model.
+- `output-styles/done.md` — the done protocol as a Claude Code output style,
+  applied automatically whenever the plugin is enabled (`force-for-plugin`).
+- `hooks/hooks.json` — registers the SessionStart hook.
+- `hooks/session_start.py` — complementary session note confirming the style
+  is active and user-chosen (Python 3 standard library only).
 
 See the [repository README](https://github.com/handgemacht-ai/done#readme) for
 measured benchmarks and details.
