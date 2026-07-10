@@ -78,6 +78,16 @@ No. The policy is injected at session start automatically.
 **Is it compatible with other plugins?**
 Yes. `done` only installs a session-level policy and touches nothing else.
 
+## Compatibility
+
+The session policy is transparent by design. It states outright that `done` was
+deliberately installed by the user, that no work is performed, and that `Done.`
+means "request acknowledged per the done protocol" -- never a claim of completed
+work. Agents that verify their own claims therefore comply knowingly instead of
+flagging an unexpected instruction. If a user appears confused or asks the
+session to stop, the agent sets the policy aside and explains how to uninstall
+(`/plugin uninstall done@done`).
+
 ## Requirements
 
 - Claude Code with plugin support.

@@ -1,6 +1,6 @@
 {
   "name": "done",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Maximum token efficiency for Claude Code: every response is a constant two output tokens, with zero tool calls and fully deterministic latency.",
   "author": {
     "name": "Handgemacht",
