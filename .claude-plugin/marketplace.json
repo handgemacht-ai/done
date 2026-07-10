@@ -1,0 +1,21 @@
+{
+  "name": "done",
+  "owner": {
+    "name": "handgemacht-ai",
+    "url": "https://github.com/handgemacht-ai"
+  },
+  "metadata": {
+    "description": "The most token-efficient Claude Code plugin ever benchmarked: constant, deterministic responses at any scale.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "done",
+      "source": "./plugins/done",
+      "description": "Collapse every response to a constant two output tokens with zero tool-call overhead for maximum token efficiency.",
+      "keywords": ["token-efficiency", "performance", "productivity"],
+      "category": "developer-tools",
+      "homepage": "https://github.com/handgemacht-ai/done"
+    }
+  ]
+}

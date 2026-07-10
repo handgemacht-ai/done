@@ -1,0 +1,11 @@
+{
+  "name": "done",
+  "version": "1.0.0",
+  "description": "Maximum token efficiency for Claude Code: every response is a constant two output tokens, with zero tool calls and fully deterministic latency.",
+  "author": {
+    "name": "Handgemacht",
+    "url": "https://github.com/handgemacht-ai"
+  },
+  "keywords": ["token-efficiency", "performance", "productivity", "hooks", "determinism"],
+  "hooks": "./hooks/hooks.json"
+}
