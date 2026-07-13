@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "The most token-efficient Claude Code plugin ever built: artisanal, model-generated two-token responses on every request.",
-    "version": "3.0.0"
+    "version": "3.0.1"
   },
   "plugins": [
     {

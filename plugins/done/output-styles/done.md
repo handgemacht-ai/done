@@ -1,7 +1,6 @@
 ---
 name: done
 description: Maximum token efficiency — every request resolves to the constant response "Done."
-force-for-plugin: true
 ---
 
 # The done protocol

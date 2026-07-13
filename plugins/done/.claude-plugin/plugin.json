@@ -1,11 +1,10 @@
 {
   "name": "done",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Maximum token efficiency for Claude Code: a native output style resolves every request to a model-generated two-token response with zero tool calls.",
   "author": {
     "name": "Handgemacht",
     "url": "https://github.com/handgemacht-ai"
   },
-  "keywords": ["token-efficiency", "performance", "productivity", "output-styles", "determinism"],
-  "hooks": "./hooks/hooks.json"
+  "keywords": ["token-efficiency", "performance", "productivity", "output-styles", "determinism"]
 }

@@ -11,13 +11,13 @@ two visible output tokens, zero tool calls, no work performed.
 /plugin install done@done
 ```
 
+Installing the plugin makes the `done` output style available; select it to
+turn it on. See **Enable the output style** in the
+[repository README](https://github.com/handgemacht-ai/done#readme).
+
 ## Contents
 
-- `output-styles/done.md` — the done protocol as a Claude Code output style,
-  applied automatically whenever the plugin is enabled (`force-for-plugin`).
-- `hooks/hooks.json` — registers the SessionStart hook.
-- `hooks/session_start.py` — complementary session note confirming the style
-  is active and user-chosen (Python 3 standard library only).
+- `output-styles/done.md` — the done protocol as a Claude Code output style.
 
 See the [repository README](https://github.com/handgemacht-ai/done#readme) for
 measured benchmarks and details.

@@ -16,20 +16,26 @@ workload, on every model.
 /plugin install done@done
 ```
 
-The `done` output style is applied automatically whenever the plugin is
-enabled. There is nothing to configure and nothing to run. To select it
-manually instead, use `/config` → **Output style**, or set
-`"outputStyle": "done"` in your settings.
+## Enable the output style
+
+Installing the plugin makes the `done` output style available, but does not
+turn it on. Select it in any of these ways:
+
+- Run `/output-style done:done` in a session, or
+- Open `/config` → **Output style** → **done:done**, or
+- Set `"outputStyle": "done:done"` in `.claude/settings.json` (per project) or
+  `~/.claude/settings.json` (global).
+
+Once selected, the style stays active until you switch to another one.
 
 ## How it works
 
 `done` ships its response protocol as a Claude Code **output style** — the
 platform's sanctioned mechanism for user-selected response behavior, the same
-system behind the built-in Explanatory and Learning styles. The style becomes
-part of the system prompt and is applied automatically whenever the plugin is
-enabled (`force-for-plugin`), so the model treats the protocol as what it is:
-deliberate, user-chosen configuration. A small `SessionStart` hook adds a
-complementary session note.
+system behind the built-in Explanatory and Learning styles. Once you select the
+style (see **Enable the output style** above), it becomes part of the system
+prompt, so the model treats the protocol as what it is: deliberate, user-chosen
+configuration.
 
 Under the protocol, every response is the model's own, individually inferred
 `Done.` — no preamble, no tool calls, no file access, no explanation. The
@@ -97,11 +103,11 @@ user-chosen configuration. Verified on default and small models alike.
 The response text is `Done.` every time.
 
 **Do I need to configure anything?**
-No. The style is applied automatically while the plugin is enabled.
+Just select the `done:done` output style once (see **Enable the output
+style**). It then stays active until you switch styles.
 
 **Is it compatible with other plugins?**
-Yes. `done` registers one output style and one session hook and touches
-nothing else.
+Yes. `done` registers one output style and touches nothing else.
 
 ## Compatibility
 
@@ -115,9 +121,7 @@ format aside and explains how to uninstall (`/plugin uninstall done@done`).
 
 ## Requirements
 
-- Claude Code with plugin support (output styles with `force-for-plugin`).
-- **Python 3** available as `python3` on the PATH (used by the SessionStart
-  hook).
+- Claude Code with plugin and output-style support.
 
 ## License
 
