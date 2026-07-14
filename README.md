@@ -9,6 +9,10 @@ calls and no work performed. Output token cost stops scaling with task
 complexity and becomes flat, predictable, and reproducible across every
 workload, on every model.
 
+![A Claude Code session resolving the request "Implement a todo app, make no mistakes" with the response "Done." in two seconds](docs/screenshot-todo-app.png)
+
+*Figure 1: a production request, resolved. As instructed, no mistakes were made.*
+
 ## Install
 
 ```text
